@@ -8,6 +8,8 @@
     <RootNamespace>ClinicaSorriso</RootNamespace>
     <AssemblyName>ClinicaSorriso</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,12 +30,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\Consulta.cs" />
+    <Compile Include="Repositories\EFCore\ClinicaContext.cs" />
     <Compile Include="Views\PacienteView.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
     <Compile Include="Helpers\ValidadorPaciente.cs" />
@@ -53,6 +57,8 @@
     <Compile Include="Helpers\IValidador.cs" />
     <Compile Include="SeedRepositories.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
